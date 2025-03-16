@@ -3,7 +3,7 @@ import './LoginPage.css';
 //Task 1: Import urlConfig from `giftlink-frontend/src/config.js`
 import { urlConfig } from '../../config';
 //Task 2: Import useAppContext `giftlink-frontend/context/AuthContext.js`
-import { useAppContext } from '../../context.AuthContext';
+import { useAppContext } from '../../context/AuthContext';
 //Task 3: Import useNavigate from `react-router-dom` to handle navigation after successful registration.
 import { useNavigate } from 'react-router-dom';
 
@@ -27,7 +27,7 @@ function LoginPage() {
     }, [navigate])
 
     // insert code here to create handleLogin function and include console.log
-    const handleLogin = async () => {
+    const handleLogin = async (e) => {
         e.preventDefault();
         console.log("Inside handleLogin");
         try{
